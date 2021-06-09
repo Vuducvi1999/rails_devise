@@ -1,0 +1,53 @@
+<div class='row'>
+  <div class = 'col-8'>
+    <ul class="list-group">
+      <li class="list-group-item" aria-disabled="true">
+        <span class='text-uppercase fw-bold'>Id:   </span>
+        <span class='fst-italic'>
+          <%= current_user.id%>
+        </span>
+      </li>
+      <li class="list-group-item">
+        <span class='text-uppercase fw-bold'>Email:   </span>
+        <span class='fst-italic'>
+          <%=current_user.email%>
+        </span>
+      </li>
+      <li class="list-group-item">
+        <span class='text-uppercase fw-bold'>Confirmed:   </span>
+        <span class='fst-italic'>
+          <%= current_user.confirmed?%>
+        </span>
+      </li>
+      <li class="list-group-item">
+        <span class='text-uppercase fw-bold'>Sign in times:   </span>
+        <span class='fst-italic'>
+          <%= current_user.sign_in_count%></span>
+      </li>
+      <li class="list-group-item">
+        <span class='text-uppercase fw-bold'>Current sign in at:   </span>
+        <span class='fst-italic'>
+          <%=current_user.current_sign_in_at%></span>
+      </li>
+      <li class="list-group-item">
+        <span class='text-uppercase fw-bold'>Last time sign in at:   </span>
+        <span class='fst-italic'>
+          <%=current_user.last_sign_in_at%></span>
+      </li>
+      <li class="list-group-item">
+        <span class='text-uppercase fw-bold'>Current sign in IP:   </span>
+        <span class='fst-italic'>
+          <%=current_user.current_sign_in_ip%></span>
+      </li>
+      <li class="list-group-item">
+        <span class='text-uppercase fw-bold'>Last time sign in IP:   </span>
+        <span class='fst-italic'>
+          <%=current_user.last_sign_in_ip%></span>
+      </li>
+    </ul>
+  </div>
+  <div class = 'col-4'>
+    <h3>Action </h3>
+    <%= link_to  "change account info", edit_user_registration_path %>
+  </div>
+</div>
