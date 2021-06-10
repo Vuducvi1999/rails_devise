@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to:'home#index'
-  devise_for :users, controllers: { confirmations: 'confirmations' }
+  devise_for :users, controllers: { confirmations: 'user/confirmations',
+                                    omniauth_callbacks: 'user/omniauth_callbacks' }
 
   resource :home, controller: :home, only: [:index] do
     collection do
