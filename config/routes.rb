@@ -9,6 +9,6 @@ Rails.application.routes.draw do
     end
   end
 
-  resource :user, controller: :user, only: [:show]
+  resource :user, controller: :user, only: [:show, :new,:create]
   
 end
