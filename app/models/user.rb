@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          # thêm tính năng
          :confirmable, :trackable, :lockable, 
+         :timeoutable,
          :omniauthable, omniauth_providers: [:google_oauth2, :facebook]
 
   def self.from_omniauth(access_token)
